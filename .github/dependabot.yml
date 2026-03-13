@@ -1,9 +1,13 @@
 version: 2
 updates:
-  - package-ecosystem: "github-actions"
+  - package-ecosystem: github-actions
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: weekly
+    groups:
+      actions-all:
+        patterns: ["*"]
+
   - package-ecosystem: bundler
     directory: "/"
     schedule:
@@ -13,6 +17,10 @@ updates:
     allow:
       - dependency-type: direct
       - dependency-type: indirect
+    groups:
+      bundler-all:
+        patterns: ["*"]
+
   - package-ecosystem: npm
     directory: "/"
     schedule:
@@ -22,3 +30,6 @@ updates:
     allow:
       - dependency-type: direct
       - dependency-type: indirect
+    groups:
+      npm-all:
+        patterns: ["*"]
