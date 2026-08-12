@@ -12,13 +12,13 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to posts_url, notice: t('.success')
     else
-      render :index, status: :unprocessable_entity
+      render :index, status: :unprocessable_content
     end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.expect(post: %i[title body])
   end
 end
