@@ -13,8 +13,8 @@ ENV RAILS_LOG_TO_STDOUT=enabled
 
 WORKDIR /app
 
-COPY Gemfile .
-COPY Gemfile.lock .
+# .ruby-version копируется вместе с Gemfile: тот читает версию именно из него.
+COPY Gemfile Gemfile.lock .ruby-version ./
 RUN bundle install
 
 COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
