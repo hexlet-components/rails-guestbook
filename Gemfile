@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '~> 3.3.4'
+ruby file: '.ruby-version'
 
 gem 'bootsnap', require: false
 gem 'cssbundling-rails'
@@ -32,7 +32,6 @@ group :development, :test do
   gem 'sqlite3'
 end
 group :development do
-  gem 'html2slim'
   gem 'i18n-debug'
   gem 'ruby-lsp-rails'
   gem 'web-console'
@@ -42,7 +41,6 @@ group :test do
   gem 'capybara'
   gem 'minitest-power_assert'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
 
 group :production do
