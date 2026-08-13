@@ -1,0 +1,6 @@
+# esbuild ставит платформенный бинарник постинсталл-скриптом: без разрешения
+# бинарника нет и сборка падает. @parcel/watcher нужен только для `sass --watch`,
+# поэтому запрещён явно.
+allowBuilds:
+  esbuild: true
+  '@parcel/watcher': false

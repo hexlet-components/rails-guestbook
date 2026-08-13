@@ -9,8 +9,6 @@ AllCops:
     - "vendor/**/*"
     - "node_modules/**/*"
   NewCops: enable
-  TargetRailsVersion: 6
-  TargetRubyVersion: 3.2
 
 Layout/LineLength:
   Enabled: false
@@ -36,7 +34,7 @@ Metrics/PerceivedComplexity:
 Rails:
   Enabled: true
 
-require:
+plugins:
   - rubocop-performance
   - rubocop-rails
 
