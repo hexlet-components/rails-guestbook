@@ -1,0 +1,9 @@
+<div class="mb-4 rounded-lg border border-gray-200 bg-white shadow-sm">
+  <div class="flex flex-wrap items-baseline gap-2 border-b border-gray-200 px-4 py-3">
+    <span class="font-semibold"><%= post.title %></span>
+    <span class="text-sm text-gray-500"><%= distance_of_time_in_words_to_now(post.created_at) %></span>
+  </div>
+  <div class="px-4 py-3">
+    <%= post.body %>
+  </div>
+</div>

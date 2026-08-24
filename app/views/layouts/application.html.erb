@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rails Guest Book</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true, nonce: true %>
+  </head>
+  <body class="flex min-h-screen flex-col bg-gray-50 text-gray-900">
+    <% flash.each do |type, value| %>
+      <div class="border-b px-4 py-3 <%= type.to_s == "alert" ? "border-red-200 bg-red-50 text-red-800" : "border-sky-200 bg-sky-50 text-sky-800" %>">
+        <%= value %>
+      </div>
+    <% end %>
+
+    <div class="flex-1">
+      <%= yield %>
+    </div>
+
+    <footer class="border-t border-gray-200 bg-white py-4">
+      <div class="mx-auto max-w-5xl px-4 text-sm text-gray-500">
+        © <%= Time.zone.today.year %> Hexlet
+      </div>
+    </footer>
+  </body>
+</html>
