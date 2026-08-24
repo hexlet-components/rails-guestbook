@@ -6,17 +6,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby file: '.ruby-version'
 
 gem 'bootsnap', require: false
-gem 'cssbundling-rails'
+gem 'tailwindcss-rails'
 # NOTE: должен быть в dev или test зависимостью. Испольузем для заполнения БД для демонстрации
 gem 'faker'
-gem 'flash_rails_messages'
 gem 'jbuilder'
 gem 'jsbundling-rails'
 gem 'puma', '~> 8.0'
 gem 'rails', '~> 8.1.3'
 gem 'sentry-rails'
-gem 'simple_form'
-gem 'slim-rails'
 gem 'sprockets-rails'
 gem 'stimulus-rails'
 gem 'turbo-rails'
@@ -27,7 +24,6 @@ group :development, :test do
   gem 'rubocop'
   gem 'rubocop-performance'
   gem 'rubocop-rails'
-  gem 'slim_lint'
   gem 'solargraph'
   gem 'sqlite3'
 end

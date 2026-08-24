@@ -1,0 +1,46 @@
+<div class="mx-auto max-w-5xl px-4">
+  <div class="py-10 text-center">
+    <h1 class="mb-2 text-4xl font-bold">Guestbook</h1>
+    <p class="mx-auto max-w-2xl text-lg text-gray-600">Please leave to us your feedback.</p>
+  </div>
+
+  <div class="grid gap-8 md:grid-cols-3">
+    <div class="md:col-span-2">
+      <h2 class="mb-4 text-xl font-semibold">Posts</h2>
+      <% if @posts.present? %>
+        <%= render(@posts) %>
+      <% else %>
+        <p class="text-gray-600">No posts yet</p>
+      <% end %>
+    </div>
+
+    <div>
+      <h2 class="mb-4 text-xl font-semibold">Feedback form</h2>
+      <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-sm">
+        <%= form_with model: @post do |form| %>
+          <% if @post.errors.any? %>
+            <div class="mb-4 rounded border border-red-200 bg-red-50 px-4 py-3 text-red-800">
+              <ul class="list-inside list-disc">
+                <% @post.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+          <% end %>
+
+          <div class="mb-4">
+            <%= form.label :title, class: "mb-1 block text-sm font-medium" %>
+            <%= form.text_field :title, class: "w-full rounded border border-gray-300 px-3 py-2" %>
+          </div>
+
+          <div class="mb-4">
+            <%= form.label :body, class: "mb-1 block text-sm font-medium" %>
+            <%= form.text_area :body, rows: 6, class: "w-full rounded border border-gray-300 px-3 py-2" %>
+          </div>
+
+          <%= form.submit class: "cursor-pointer rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
