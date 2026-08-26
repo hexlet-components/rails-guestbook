@@ -25,10 +25,8 @@ gem 'solid_cache'
 gem 'solid_queue'
 
 group :development, :test do
+  gem 'rubocop-rails-omakase', require: false
   gem 'debug', platforms: %i[mri windows]
-  gem 'rubocop'
-  gem 'rubocop-performance'
-  gem 'rubocop-rails'
   gem 'solargraph'
   gem 'sqlite3'
 end
