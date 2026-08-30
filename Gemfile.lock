@@ -287,6 +287,10 @@ GEM
       rack (>= 1.1)
       rubocop (>= 1.75.0, < 2.0)
       rubocop-ast (>= 1.44.0, < 2.0)
+    rubocop-rails-omakase (1.1.0)
+      rubocop (>= 1.72)
+      rubocop-performance (>= 1.24)
+      rubocop-rails (>= 2.30)
     ruby-lsp (0.26.10)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
@@ -421,9 +425,7 @@ DEPENDENCIES
   propshaft
   puma (~> 8.0)
   rails (~> 8.1.3)
-  rubocop
-  rubocop-performance
-  rubocop-rails
+  rubocop-rails-omakase
   ruby-lsp-rails
   selenium-webdriver
   sentry-rails

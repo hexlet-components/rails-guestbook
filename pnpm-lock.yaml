@@ -18,7 +18,7 @@ importers:
         specifier: ^8.0.23
         version: 8.0.23
       esbuild:
-        specifier: ^0.28.1
+        specifier: ^0.28.2
         version: 0.28.2
       tailwindcss:
         specifier: ^4.3.3
