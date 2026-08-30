@@ -1,18 +1,18 @@
 # frozen_string_literal: true
 
-require 'test_helper'
+require "test_helper"
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
   setup do
     Faker::Config.random = Random.new(42)
   end
 
-  test 'should get index' do
+  test "should get index" do
     get posts_url
     assert_response :success
   end
 
-  test 'should create post' do
+  test "should create post" do
     params = { post: { body: Faker::Markdown.emphasis, title: Faker::Address.full_address } }
     post(posts_url, params:)
 

@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     @posts = Post.latest.all
     @post = Post.new(post_params)
     if @post.save
-      redirect_to posts_url, notice: t('.success')
+      redirect_to posts_url, notice: t(".success")
     else
       render :index, status: :unprocessable_content
     end
