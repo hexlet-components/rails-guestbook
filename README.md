@@ -4,9 +4,9 @@
 
 ## Requirements
 
-* Ruby 3.2.2+
-* Node.js & npm
-* SQLite for local
+- Ruby 3.2.2+
+- Node.js & npm
+- SQLite for local
 
 ## Setup
 
