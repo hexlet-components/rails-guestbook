@@ -5,7 +5,7 @@ RUN apt-get update \
 
 RUN curl -sL https://deb.nodesource.com/setup_26.x | bash -
 RUN apt-get install -y nodejs
-RUN npm install --global pnpm@11
+RUN npm install --global pnpm@12
 
 ENV DISABLE_SPRING=1
 ENV RAILS_SERVE_STATIC_FILES=enabled
