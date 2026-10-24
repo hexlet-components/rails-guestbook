@@ -3,6 +3,7 @@ FROM ruby:4.0.6
 RUN apt-get update \
   && apt-get install -y build-essential libpq-dev libsqlite3-dev curl
 
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN curl -sL https://deb.nodesource.com/setup_26.x | bash -
 RUN apt-get install -y nodejs
 RUN npm install --global pnpm@12
