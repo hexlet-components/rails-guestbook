@@ -3,11 +3,11 @@
   "private": "true",
   "packageManager": "pnpm@12.6.0",
   "dependencies": {
-    "@herb-tools/linter": "^0.10.4",
+    "@herb-tools/linter": "^0.11.1",
     "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo-rails": "^8.0.23",
     "esbuild": "^0.28.2",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.4"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets"
